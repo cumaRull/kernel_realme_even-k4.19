@@ -156,12 +156,12 @@ dma_addr_t Get_Afe_Sram_Capture_Phys_Addr(void)
 	return (dma_addr_t)(AFE_INTERNAL_SRAM_PHY_BASE + SramCaptureOffSet);
 }
 
-void *Get_Afe_SramBase_Pointer(void)
+void *Get_Afe_SramBase_Pointer()
 {
 	return AFE_SRAM_ADDRESS;
 }
 
-void *Get_Afe_SramCaptureBase_Pointer(void)
+void *Get_Afe_SramCaptureBase_Pointer()
 {
 	char *CaptureSramPointer =
 		(char *)(AFE_SRAM_ADDRESS) + SramCaptureOffSet;
@@ -169,7 +169,7 @@ void *Get_Afe_SramCaptureBase_Pointer(void)
 	return (void *)CaptureSramPointer;
 }
 
-void *Get_Afe_Powertop_Pointer(void)
+void *Get_Afe_Powertop_Pointer()
 {
 	return AFE_TOP_ADDRESS;
 }
